@@ -1,0 +1,19 @@
+/**
+ * @file custom.scss
+ * Contains all sass files.
+ */
+
+// Import variables.
+@import "custom/variables";
+
+// Import components.
+@import "custom/components";
+
+// Import layouts.
+@import "custom/layouts";
+
+// Import page styles.
+@import "custom/pages";
+
+// Import custom styles.
+@import "custom/custom";

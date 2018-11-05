@@ -1,0 +1,73 @@
+/**
+ * @file _functions.scss
+ * Contains sass functions.
+ */
+
+// Shadows
+@mixin shadow($distance, $value, $hover:false) {
+    -webkit-box-shadow: 0 0 $distance rgba(0, 0, 0, $value);
+    -moz-box-shadow:    0 0 $distance rgba(0, 0, 0, $value);
+    -ms-box-shadow:     0 0 $distance rgba(0, 0, 0, $value);
+    -o-box-shadow:      0 0 $distance rgba(0, 0, 0, $value);
+    box-shadow:         0 0 $distance rgba(0, 0, 0, $value);
+    @if $hover {
+        &:hover {
+            -webkit-box-shadow: 0 0 $distance*2 rgba(0, 0, 0, $value);
+            -moz-box-shadow:    0 0 $distance*2 rgba(0, 0, 0, $value);
+            -ms-box-shadow:     0 0 $distance*2 rgba(0, 0, 0, $value);
+            -o-box-shadow:      0 0 $distance*2 rgba(0, 0, 0, $value);
+            box-shadow:         0 0 $distance*2 rgba(0, 0, 0, $value);
+        }
+    }
+}
+
+@mixin textShadow($distance, $value, $hover:false) {
+    -webkit-text-shadow: 0 0 $distance rgba(0, 0, 0, $value);
+    -moz-text-shadow:    0 0 $distance rgba(0, 0, 0, $value);
+    -ms-text-shadow:     0 0 $distance rgba(0, 0, 0, $value);
+    -o-text-shadow:      0 0 $distance rgba(0, 0, 0, $value);
+    text-shadow:         0 0 $distance rgba(0, 0, 0, $value);
+    @if $hover {
+        &:hover {
+            -webkit-text-shadow: 0 0 $distance*2 rgba(0, 0, 0, $value);
+            -moz-text-shadow:    0 0 $distance*2 rgba(0, 0, 0, $value);
+            -ms-text-shadow:     0 0 $distance*2 rgba(0, 0, 0, $value);
+            -o-text-shadow:      0 0 $distance*2 rgba(0, 0, 0, $value);
+            text-shadow:         0 0 $distance*2 rgba(0, 0, 0, $value);
+        }
+    }
+}
+
+// Translates
+@mixin translate($value, $direction:x) {
+    @if $direction == x {
+        -webkit-transform: translateX($value);
+        -moz-transform:    translateX($value);
+        -ms-transform:     translateX($value);
+        -o-transform:      translateX($value);
+        transform:         translateX($value);
+    } @else {
+        -webkit-transform: translateY($value);
+        -moz-transform:    translateY($value);
+        -ms-transform:     translateY($value);
+        -o-transform:      translateY($value);
+        transform:         translateY($value);
+    }
+}
+
+@mixin scale($value) {
+    -webkit-transform: scale($value);
+    -moz-transform:    scale($value);
+    -ms-transform:     scale($value);
+    -o-transform:      scale($value);
+    transform:         scale($value);
+}
+
+// Filter
+@mixin grayscale($value) {
+    -webkit-filter: grayscale($value);
+    -moz-filter:    grayscale($value);
+    -ms-filter:     grayscale($value);
+    -o-filter:      grayscale($value);
+    filter:         grayscale($value);
+}

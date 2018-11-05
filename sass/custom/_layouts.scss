@@ -1,0 +1,13 @@
+/**
+ * @file _layouts.scss
+ * Contains layout styles.
+ */
+
+// Import header layout.
+@import "layouts/header";
+
+// Import navigation layout.
+@import "layouts/navigation";
+
+// Import footer layout.
+@import "layouts/footer";
